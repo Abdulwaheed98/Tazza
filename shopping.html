@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column; /* Added to align content vertically */
+            position: relative; /* Added for footer positioning */
+        }
+
+        nav a {
+            position: relative;
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+            padding: 6px 20px;
+            transition: .5s;
+        }
+
+        nav a:hover {
+            color: #0ef;
+        }
+
+        nav a span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            z-index: -1;
+            border-bottom: 2px solid #0ef;
+            border-radius: 15px;
+            transform: scale(0) translateY(50px);
+            opacity: 0;
+            transition: .5s;
+        }
+
+        nav a:hover span {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: rgba(255, 255, 255, 0.7); /* Semi-transparent white color */
+            font-size: 1.5em;
+            transition: color 0.3s ease-in-out; /* Added transition for smooth effect */
+        }
+
+        .social-icons a:hover {
+            color: rgba(0, 238, 255, 0.9); /* Semi-transparent cyan color on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#">Home <span></span></a>
+        <a href="#">Contacts <span></span></a>
+        <a href="map.html">Shopping <span></span></a>
+    </nav> 
+    <div class="btn">
+         
+        <a href="thanks.html"> 
+            <button> Place Order</button>
+        </a>
+    </div>
+
+    <div id="app"></div>
+    <div id="temporaryContent">
+        <div class="listProduct"></div>
+    </div> 
+    <div class="btn">
+        <a href="thanks.html">
+            <button>Place Order</button>
+        </a>  
+        <style> 
+.btn button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;  
+}
+        </style>
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
+    
